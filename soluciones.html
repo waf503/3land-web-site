@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluciones | Bilans ERP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0A192F",
+                        "navy-light": "#112240",
+                        "navy-lighter": "#233554",
+                        "accent-cyan": "#64ffda"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F;
+        }
+        .mac-window-frame {
+            border-top: 24px solid #1e293b;
+            position: relative;
+        }
+        .mac-window-frame::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5f56;
+            box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-navy-light bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">Bilans ERP</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Soluciones</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Precios</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Nosotros</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Soporte</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex text-white text-sm font-semibold px-4 py-2 hover:text-primary transition-colors">Iniciar Sesión</button>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-primary/20">
+                    Registrarse
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent-cyan/30 rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">
+                    Soluciones a la medida<br class="hidden md:block"/> de tu operación.
+                </h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed mb-10">
+                    Desde facturación básica hasta control total de proyectos. <br class="hidden sm:block"/> Elige el motor que tu empresa necesita para crecer.
+                </p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-xl transition-all transform hover:scale-105">
+                        Ver Planes y Precios
+                    </button>
+<button class="bg-navy-light hover:bg-navy-lighter text-white font-bold px-8 py-4 rounded-xl transition-all border border-slate-700">
+                        Hablar con un Experto
+                    </button>
+</div>
+</div>
+</section>
+<!-- Solutions Showcase (Zig-Zag) -->
+<section class="py-20 lg:py-32 space-y-32">
+<!-- Section 1: Solo Facturación -->
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 order-2 lg:order-1">
+<span class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase rounded-full mb-6">PLAN BÁSICO</span>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Cumple con Hacienda en segundos y sin estrés.</h3>
+<p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                            Diseñado para profesionales independientes, consultores y pequeños comercios. Emite tus DTEs desde cualquier dispositivo y envíalos automáticamente por WhatsApp a tus clientes, mientras nosotros nos encargamos de todo tu trámite legal de Firma Electrónica.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Envío instantáneo de PDF y JSON directo al WhatsApp del cliente.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">100% en la nube: factura desde tu celular o computadora.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Acompañamiento y gestión gratuita ante el Ministerio de Hacienda.</span>
+</li>
+</ul>
+<button class="border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan/10 font-bold px-8 py-3 rounded-xl transition-all">
+                            Ver Plan
+                        </button>
+</div>
+<div class="flex-1 order-1 lg:order-2 w-full">
+<div class="mac-window-frame rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-navy-light group transition-transform hover:-translate-y-2">
+<img class="w-full h-auto" data-alt="Interfaz limpia de sistema de facturación electrónica con DTEs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6CTgsGCMeWDUnSGoF0BwneC3Gh0wESRT3304OXJ_YwEFd01Xbpj3DtTQyjO3dagf2i7VvovStT1IKkglhkmpgwzxfoN00DMDBplawyOkg0VU-E5uIbk9yvP0TjGbtgsBTC0I8uxSnxNNmR__H92vCBkilj2DbBJJtrS3M_AZ-jbqhOURpIENVmDFb2ayrKSI_KcVbvNz6Ig7uU76Lvr4i5DLov76ZHBz7JAoA6N8LOOJWxCV0Vr2rEz5e-rQm1CXSo-QsZSUktW52"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Gestión Pyme -->
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 w-full">
+<div class="mac-window-frame rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-navy-light group transition-transform hover:-translate-y-2">
+<img class="w-full h-auto" data-alt="Dashboard de gestión de inventario multi-sucursal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApyX1TkHyhEAmQgkug9O3AAwdGDIqAjnf83e-aJHF-0y_fVRGn5Fu5U4FYV3kUVugEtDBXCLWAHXkXuszV02BUAtD5FywafTY3iG1c_-BFvDlcU-fE-ALdP0msN5qMoYglcI0cnakqBp33lBCS2y_j_eEe-XCNZTrf3CSCTBOY5LnQBWpaP2HzH_PN3sQYlSs9PfuovfLDqbHS_F0aPI0-_uzL690BESu2-XMzYheEeuxuIzG-8OSr5A8qECS23CsRPi0-lt7fn2E3"/>
+</div>
+</div>
+<div class="flex-1">
+<span class="inline-block px-4 py-1.5 bg-accent-cyan/10 text-accent-cyan text-xs font-bold tracking-widest uppercase rounded-full mb-6">CONTROL Y EXPANSIÓN</span>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Audita tus sucursales y frena el robo hormiga.</h3>
+<p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                            Toma el control absoluto de tu inventario sin tener que vivir atado a tu negocio. Ideal para ferreterías, tiendas de repuestos, boutiques y comercios. Con Bilans Pyme aplicamos un candado: si no hay factura electrónica, la caja no abre.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Sincronización de stock multi-sucursal en tiempo real.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Reportes de existencias y alertas de bajo inventario al instante.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Migración inicial de tus productos desde Excel totalmente gratis.</span>
+</li>
+</ul>
+<button class="border-2 border-primary text-primary hover:bg-primary/10 font-bold px-8 py-3 rounded-xl transition-all">
+                            Ver Plan
+                        </button>
+</div>
+</div>
+</div>
+<!-- Section 3: Bilans Enterprise -->
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 order-2 lg:order-1">
+<span class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase rounded-full mb-6">CORPORATIVO E INDUSTRIAL</span>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Visibilidad financiera total para operaciones complejas.</h3>
+<p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                            Centraliza la gestión de grandes volúmenes de ventas, múltiples bodegas, importaciones y contabilidad en un solo ecosistema. Obtén estados financieros automatizados, gestiona tu cartera de clientes y toma decisiones gerenciales basadas en datos exactos.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Manejo avanzado de Cuentas por Cobrar, Cuentas por Pagar y Bancos.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Reportes de rentabilidad gerencial en tiempo real.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-accent-cyan mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Infraestructura en la nube con seguridad de grado bancario.</span>
+</li>
+</ul>
+<button class="border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan/10 font-bold px-8 py-3 rounded-xl transition-all">
+                            Ver Plan
+                        </button>
+</div>
+<div class="flex-1 order-1 lg:order-2 w-full">
+<div class="mac-window-frame rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-navy-light group transition-transform hover:-translate-y-2">
+<img class="w-full h-auto" data-alt="Panel financiero ERP complejo con gráficos y métricas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMqfADz8h7nD1qHcVfbH0SqKJ7kd73juWOKqiipe5N6pfN698oD-N_pI1bNYyhdCDxBcT1-XAOiPt8cHvVncjAaUiWTFjC0K8jHAQ__tv57B1dg5Y9r4Pyb1IfclAHL53PqlrNaIZ-aKFjO4zMWGqGBvMWbJ_myWhLLqeF7VZpaAyFak2SkMpANzoi-q0NGvcXPMdFq4_t87Vwg-GC7-b4kGQuUwpnIphRmASz9QD0QNaEvWmMFd4wA4J73TmdTc2UgIzg_wKCIklO"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Restaurantes -->
+<div class="max-w-7xl mx-auto px-6 pb-20">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 w-full">
+<div class="mac-window-frame rounded-xl overflow-hidden shadow-2xl shadow-black/50 bg-navy-light group transition-transform hover:-translate-y-2">
+<img class="w-full h-auto" data-alt="Interfaz táctil de punto de venta para restaurante" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVFxjtkl1FBF8OdfIF04m7eIHrCTaot9z0f7Z_mjoxDTC51MwLOlYL_45KJUCuR0LZXbH3dVBpHVrqgN2bCzIG0HQwnUbleLt1B_9qTFFebq4zow5k7xAq3bfRxCHHUgoxqXkFGZ46Sk3UciYrv-FxCSFhETUGnVR2wD8_l_u8byMkVoW5S47CWo3ltLIT9M2z2GLwyQIjAf8Bgf2m9m1gwF1LsA7_ScHSz4YOycDEgmfEbNhf9iTL9sinc1Hc3yV2wkzofmnbFdpj"/>
+</div>
+</div>
+<div class="flex-1">
+<span class="inline-block px-4 py-1.5 bg-accent-cyan/10 text-accent-cyan text-xs font-bold tracking-widest uppercase rounded-full mb-6">VELOCIDAD GASTRONÓMICA</span>
+<h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Cierres de caja perfectos en un solo clic.</h3>
+<p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                            Un Punto de Venta (POS) ultrarrápido diseñado para soportar el caos de la cocina y las horas pico. Toma órdenes de forma visual, agiliza el servicio a tus clientes y despídete del estrés y los descuadres de dinero a la hora de cerrar.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Descargo automático de inventario por receta (ingredientes precisos).</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Interfaz táctil e intuitiva que tus meseros dominarán en minutos.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1" style="font-size: 20px;">check_circle</span>
+<span class="text-slate-300">Manejo fluido de comandas, cuentas separadas y propinas.</span>
+</li>
+</ul>
+<button class="border-2 border-primary text-primary hover:bg-primary/10 font-bold px-8 py-3 rounded-xl transition-all">
+                            Ver Plan
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="relative rounded-3xl overflow-hidden p-10 lg:p-16 text-center bg-gradient-to-r from-navy-light to-navy-lighter border border-navy-light shadow-2xl">
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Tranquilidad fiscal y operativa <br class="hidden sm:block"/> a un clic de distancia.</h2>
+<button class="bg-primary hover:bg-primary/90 text-white text-lg font-bold px-10 py-5 rounded-xl transition-all shadow-xl shadow-primary/20 transform hover:-translate-y-1">
+                        Agendar Demo Gratuita
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-navy-light pt-20 pb-10 border-t border-navy-lighter">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div>
+<div class="flex items-center gap-3 text-white mb-6">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Bilans ERP</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                        Potenciando el crecimiento de las empresas mediante tecnología inteligente y acompañamiento fiscal de primer nivel.
+                    </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Productos</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="#">Facturación Electrónica</a></li>
+<li><a class="hover:text-primary" href="#">Bilans Pyme</a></li>
+<li><a class="hover:text-primary" href="#">Bilans Enterprise</a></li>
+<li><a class="hover:text-primary" href="#">Restaurantes &amp; POS</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Empresa</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="#">Nosotros</a></li>
+<li><a class="hover:text-primary" href="#">Soporte Técnico</a></li>
+<li><a class="hover:text-primary" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary" href="#">Términos de Servicio</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contacto</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">mail</span>
+                            hola@bilans.com
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">call</span>
+                            +503 2222-2222
+                        </li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-navy-lighter flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+<p>© 2024 Bilans ERP. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Twitter</a>
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-white transition-colors" href="#">Facebook</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

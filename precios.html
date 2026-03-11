@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planes y Precios - Bilans ERP</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0A192F',
+              darker: '#060E1A',
+              cyan: '#00C2E0',
+              orange: '#F15A24',
+              gray: '#94A3B8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #0A192F;
+      color: #FFFFFF;
+    }
+    .cyan-glow {
+      box-shadow: 0 0 40px rgba(0, 194, 224, 0.15);
+    }
+    .pricing-card {
+      background-color: #112240;
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-brand-navy/90 backdrop-blur-md border-b border-white/10" data-purpose="main-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-brand-orange rounded-sm flex items-center justify-center">
+<span class="text-white font-bold text-xl">B</span>
+</div>
+<span class="text-white font-bold text-xl tracking-tight">Bilans <span class="font-normal opacity-80 text-sm">ERP</span></span>
+</div>
+<!-- Nav Links -->
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+<a class="hover:text-white transition-colors" href="#">Soluciones</a>
+<a class="text-white border-b-2 border-brand-orange pb-1" href="#">Precios</a>
+<a class="hover:text-white transition-colors" href="#">Nosotros</a>
+<a class="hover:text-white transition-colors" href="#">Soporte</a>
+</nav>
+<!-- CTA Buttons -->
+<div class="flex items-center space-x-4">
+<a class="text-sm font-medium hover:text-white transition-colors" href="#">Iniciar Sesión</a>
+<a class="bg-brand-orange hover:bg-orange-600 text-white px-5 py-2.5 rounded-md text-sm font-bold transition-all" href="#">
+            Registrarse
+          </a>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: PricingHero -->
+<section class="py-20 px-4 text-center bg-gradient-to-b from-brand-darker to-brand-navy">
+<div class="max-w-3xl mx-auto">
+<h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          Planes que impulsan tu <span class="text-brand-cyan">crecimiento</span>
+</h1>
+<p class="text-brand-gray text-lg mb-4">
+          Desde facturación básica hasta control total de proyectos. Elige el motor que tu empresa necesita para crecer.
+        </p>
+<div class="inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10 mt-4">
+<span class="text-white font-medium">Mensualidades desde:</span>
+</div>
+</div>
+</section>
+<!-- END: PricingHero -->
+<!-- BEGIN: PricingGrid -->
+<section class="pb-32 px-4" data-purpose="pricing-cards-container">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Left Card: Plan Emprendedor -->
+<div class="pricing-card rounded-2xl p-8 border border-white/5 flex flex-col h-full" data-purpose="pricing-card-basic">
+<div class="mb-8">
+<h3 class="text-xl font-bold mb-2">Plan Emprendedor</h3>
+<p class="text-brand-gray text-sm">Ideal para profesionales independientes y microempresas.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-white">$49</span>
+<span class="text-brand-gray">/mes</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow text-sm text-gray-300">
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Facturación electrónica ilimitada</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Envío automático por WhatsApp</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Gestión de firmas electrónicas</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Soporte técnico básico</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 border border-brand-cyan text-brand-cyan font-bold rounded-lg hover:bg-brand-cyan/10 transition-colors">
+            Contactar asesor
+          </button>
+</div>
+<!-- Middle Card: Plan Profesional (Featured) -->
+<div class="pricing-card rounded-2xl p-8 border-2 border-brand-cyan cyan-glow relative flex flex-col h-full transform scale-105 z-10" data-purpose="pricing-card-featured">
+<!-- Featured Badge -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-cyan text-brand-navy text-[10px] font-bold uppercase tracking-widest py-1 px-4 rounded-full flex items-center gap-1">
+<svg class="w-3 h-3" fill="currentColor" viewbox="0 0 24 24"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z"></path></svg>
+            Más solicitada
+          </div>
+<div class="mb-8 mt-4">
+<h3 class="text-2xl font-bold mb-2">Plan Profesional</h3>
+<p class="text-brand-gray text-sm">Para negocios en crecimiento que necesitan control total.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-5xl font-bold text-white">$99</span>
+<span class="text-brand-gray">/mes</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow text-sm">
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Todo lo del Plan Emprendedor</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Sincronización multi-sucursal</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Control de inventario avanzado</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Reportes de rentabilidad en tiempo real</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Integración con puntos de venta (POS)</span>
+</li>
+</ul>
+<button class="w-full py-4 px-4 bg-brand-cyan text-brand-navy font-bold rounded-lg hover:bg-white transition-all shadow-lg shadow-brand-cyan/20">
+            Contactar asesor
+          </button>
+</div>
+<!-- Right Card: Plan Enterprise -->
+<div class="pricing-card rounded-2xl p-8 border border-white/5 flex flex-col h-full" data-purpose="pricing-card-enterprise">
+<div class="mb-8">
+<h3 class="text-xl font-bold mb-2">Plan Enterprise</h3>
+<p class="text-brand-gray text-sm">Soluciones personalizadas para operaciones corporativas.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-bold text-white">$199</span>
+<span class="text-brand-gray">/mes</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow text-sm text-gray-300">
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Todo lo del Plan Profesional</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Visibilidad financiera total</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Cuentas por cobrar y pagar (Bancos)</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Seguridad de grado bancario</span>
+</li>
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Account Manager dedicado</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 border border-brand-cyan text-brand-cyan font-bold rounded-lg hover:bg-brand-cyan/10 transition-colors">
+            Contactar asesor
+          </button>
+</div>
+</div>
+</section>
+<!-- END: PricingGrid -->
+<!-- BEGIN: BannerCTA -->
+<section class="py-20 bg-[#061226] mx-4 rounded-3xl mb-24 text-center overflow-hidden relative">
+<div class="relative z-10 px-6">
+<h2 class="text-3xl md:text-4xl font-bold mb-8">Tranquilidad fiscal y operativa <br class="hidden md:block"/> a un clic de distancia.</h2>
+<button class="bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-orange/20 transition-all">
+          Agendar Demo Gratuita
+        </button>
+</div>
+</section>
+<!-- END: BannerCTA -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-brand-darker pt-20 pb-10 px-4 border-t border-white/5" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<!-- Brand Info -->
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-6 h-6 bg-brand-orange rounded-sm flex items-center justify-center">
+<span class="text-white font-bold text-sm">B</span>
+</div>
+<span class="text-white font-bold text-lg tracking-tight">Bilans <span class="font-normal opacity-80 text-xs">ERP</span></span>
+</div>
+<p class="text-brand-gray text-sm leading-relaxed">
+            Potenciando el crecimiento de las empresas mediante tecnología inteligente y acompañamiento fiscal de primer nivel.
+          </p>
+</div>
+<!-- Footer Column 1 -->
+<div>
+<h4 class="text-white font-bold mb-6">Productos</h4>
+<ul class="space-y-4 text-brand-gray text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Facturación Electrónica</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Bilans Pyme</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Bilans Enterprise</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Restaurantes &amp; POS</a></li>
+</ul>
+</div>
+<!-- Footer Column 2 -->
+<div>
+<h4 class="text-white font-bold mb-6">Empresa</h4>
+<ul class="space-y-4 text-brand-gray text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Nosotros</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Soporte Técnico</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Términos de Servicio</a></li>
+</ul>
+</div>
+<!-- Footer Column 3 -->
+<div>
+<h4 class="text-white font-bold mb-6">Contacto</h4>
+<ul class="space-y-4 text-brand-gray text-sm">
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-orange" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              hola@bilans.com
+            </li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-orange" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.474 5.474l.772-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+              +503 2222-2222
+            </li>
+</ul>
+</div>
+</div>
+<!-- Bottom Footer -->
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-brand-gray">
+<p>© 2024 Bilans ERP. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Twitter</a>
+<a class="hover:text-white" href="#">LinkedIn</a>
+<a class="hover:text-white" href="#">Facebook</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>
