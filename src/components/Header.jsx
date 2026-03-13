@@ -15,15 +15,15 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="fixed top-0 w-full z-50 glass">
+        <header className="fixed top-0 w-full z-50 glass border-b border-primary/10">
             <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-                {/* Logo con el filtro invertido de tu referencia */}
+                {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
                     <Logo className="h-8 w-auto brightness-0 invert" />
                 </Link>
 
-                {/* Desktop Nav - Aplicando colores de tu referencia */}
+                {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
                     {NAV_LINKS.map((link) => (
                         <Link
@@ -36,24 +36,21 @@ export default function Header() {
                     ))}
                 </div>
 
-                {/* Botones de Acción */}
+                {/* Actions Buttons */}
                 <div className="flex items-center gap-4">
-                    <button className="hidden sm:block text-sm font-semibold text-slate-200 hover:text-primary transition-colors cursor-pointer">
-                        Log In
-                    </button>
 
                     <button className="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer active:scale-95">
                         Demo gratuita
                     </button>
 
-                    {/* Botón hamburguesa móvil */}
+                    {/* Mobil menu button */}
                     <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <X /> : <Menu />}
                     </button>
                 </div>
             </nav>
 
-            {/* Menú Móvil - Adaptado al estilo Glass */}
+            {/* Mobil glass menu */}
             {isOpen && (
                 <nav className="absolute top-full left-0 w-full glass p-6 md:hidden flex flex-col gap-4">
                     {NAV_LINKS.map((link) => (
@@ -69,5 +66,6 @@ export default function Header() {
                 </nav>
             )}
         </header>
+
     );
 }
