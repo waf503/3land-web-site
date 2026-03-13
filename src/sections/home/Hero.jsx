@@ -16,27 +16,47 @@ export default function Hero() {
                         </span>
                         Nueva Versión 4.0
                     </div>
-                    <h1 className="text-5xl lg:text-7xl font-black leading-tight tracking-tight dark:text-white">
+                    <h1 className="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
                         Optimiza tu gestión empresarial con <span className="text-primary">Bilans ERP</span>
                     </h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-custom max-w-xl leading-relaxed">
+                    <p className="text-lg text-slate-600 text-slate-custom max-w-xl leading-relaxed">
                         Automatiza procesos, escala tu negocio y toma decisiones basadas en datos con nuestra plataforma
                         integral diseñada para el crecimiento sostenible de empresas modernas.
                     </p>
                     <div className="flex flex-wrap gap-4 pt-4">
                         <button
-                            className="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl text-base font-bold transition-all shadow-xl shadow-primary/25">
+                            className="
+                            bg-primary
+                            hover:bg-primary/90
+                            text-background-dark
+                            px-8 py-4
+                            rounded-xl
+                            text-base
+                            font-bold
+                            transition-all">
                             Agendar Demo
                         </button>
                         <button
-                            className="border border-slate-300 dark:border-navy-lighter hover:bg-slate-100 dark:hover:bg-navy-lighter px-8 py-4 rounded-xl text-base font-bold transition-all">
+                            className="
+                            border
+                            border-slate-300
+                            dark:border-navy-lighter
+                            hover:bg-slate-100
+                            dark:hover:bg-navy-lighter
+                            px-8 py-4 rounded-xl
+                            text-base
+                            text-white
+                            font-bold
+                            transition-all
+                            ">
                             Ver Planes
                         </button>
                     </div>
                 </div>
                 <div className="relative lg:ml-10">
                     {/* Contenedor con animación y efecto glass */}
-                    <div className="animate-float rounded-xl overflow-hidden shadow-2xl shadow-primary/20 border border-white/10 glass p-1 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div
+                        className="animate-float rounded-xl overflow-hidden shadow-2xl shadow-primary/20 border border-white/10 glass p-1 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
 
                         {/* Barra superior estilo "Navegador" */}
                         <div className="bg-navy-lighter/50 px-4 py-2 flex items-center gap-1.5 border-b border-white/5">
