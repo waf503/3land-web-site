@@ -1,6 +1,3 @@
-import {LayoutDashboard, Package, Grid2x2, CircleDot, Minus} from 'lucide-react'
-
-const SIDEBAR_ICONS = [LayoutDashboard, Grid2x2, Package, CircleDot, Minus]
 
 export default function Hero() {
     return (
@@ -73,6 +70,7 @@ export default function Hero() {
                             loading="lazy"
                         />
                     </div>
+                    <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 blur-3xl -z-10 rounded-full"></div>
                 </div>
             </div>
         </section>

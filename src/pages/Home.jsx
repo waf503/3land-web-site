@@ -1,11 +1,14 @@
 import { ArrowRight, Star, Shield, Zap } from 'lucide-react';
 import Hero from "../sections/home/Hero.jsx";
+import Features from "../sections/home/Features.jsx";
 
 export default function Home() {
     return (
         <>
             {/* Hero Section */}
             <Hero/>
+            {/** Feature Section */}
+            <Features/>
 
             {/* Características para probar Scroll */}
             <section className="py-24 bg-white">

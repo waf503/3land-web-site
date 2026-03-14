@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants/navigation';
-import Logo from '../common/Logo';
+import Logo from './common/Logo';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
