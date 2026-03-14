@@ -19,7 +19,7 @@ export default function Hero() {
                     <h1 className="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
                         Optimiza tu gestión empresarial con <span className="text-primary">Bilans ERP</span>
                     </h1>
-                    <p className="text-lg text-slate-600 text-slate-custom max-w-xl leading-relaxed">
+                    <p className="text-lg  text-slate-custom max-w-xl leading-relaxed">
                         Automatiza procesos, escala tu negocio y toma decisiones basadas en datos con nuestra plataforma
                         integral diseñada para el crecimiento sostenible de empresas modernas.
                     </p>
@@ -40,9 +40,8 @@ export default function Hero() {
                             className="
                             border
                             border-slate-300
-                            dark:border-navy-lighter
-                            hover:bg-slate-100
-                            dark:hover:bg-navy-lighter
+                            border-navy-lighter
+                            hover:bg-navy-lighter
                             px-8 py-4 rounded-xl
                             text-base
                             text-white
