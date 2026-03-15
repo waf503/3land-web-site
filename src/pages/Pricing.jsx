@@ -5,7 +5,7 @@ export default function Pricing() {
     return (
         <> {/* Usamos un fragment para no ensuciar el DOM */}
             {/* 1. SECCIÓN HERO DE PRECIOS */}
-            <section className="py-32 relative overflow-hidden border-b border-white/5">
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 pattern-dots opacity-10 pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto px-6 text-center relative z-10">

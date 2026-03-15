@@ -12,6 +12,14 @@
     --color-navy-lighter: #233554;
     --color-slate-custom: #8892b0;
 
+    /* --- Nueva Paleta Indigo --- */
+    --color-accent-indigo: #818cf8;
+    --color-indigo-glow: rgba(129, 140, 248, 0.2);
+
+    /* --- Variables Dinámicas para Soluciones --- */
+    --solution-accent: var(--color-primary);
+    --solution-glow: rgba(0, 194, 224, 0.2);
+
     /* Gradients */
     --background-image-hero-gradient: radial-gradient(circle at 50% 50%, rgba(0, 194, 224, 0.15) 0%, rgba(10, 25, 47, 0) 70%);
     --background-image-cta-mesh:
@@ -36,6 +44,18 @@
     /* ANIMACIÓN: Ahora sí encontrará 'float' */
     --animate-float: float 6s ease-in-out infinite;
 
+}
+
+@layer components {
+    .theme-indigo {
+        --solution-accent: var(--color-accent-indigo);
+        --solution-glow: var(--color-indigo-glow);
+    }
+
+    /* Efecto de sombra dinámica basado en la variable */
+    .solution-card-glow {
+        box-shadow: 0 20px 50px -12px var(--solution-glow);
+    }
 }
 @utility glass {
     background: rgba(17, 34, 64, 0.7);
