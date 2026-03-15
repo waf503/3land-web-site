@@ -20,6 +20,7 @@ export default function Features() {
                             icon={feat.icon}
                             title={feat.title}
                             desc={feat.desc}
+                            color={feat.color}
                         />
                     ))}
                 </div>
