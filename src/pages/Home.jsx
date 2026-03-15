@@ -13,6 +13,8 @@ export default function Home() {
             <Features/>
             {/**Core and benefits*/}
             <CoreBenefits/>
+            {/**CTA Section*/}
+            <CTASection/>
         </>
     );
 }
