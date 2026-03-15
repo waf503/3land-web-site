@@ -3,7 +3,7 @@ import FeatureCard from "../../components/common/FeatureCard";
 
 export default function Features() {
     return (
-        <section className="py-24 bg-[#081221]">
+        <section id="features" className="py-24 bg-[#081221]">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h1 className="text-3xl lg:text-4xl font-bold text-white">

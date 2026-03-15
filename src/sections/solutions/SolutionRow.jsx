@@ -3,17 +3,19 @@ import { CheckCircle2 } from 'lucide-react';
 export default function SolutionRow({ solution, index }) {
     const isEven = index % 2 === 0;
     const { tag, title, description, features, image, color, buttonText } = solution;
-
-    // Aplicamos la clase del tema (si es indigo aplica las variables de indigo, si no, usa las de primary por defecto)
     const themeClass = color === 'indigo' ? 'theme-indigo' : 'theme-primary';
 
     return (
         <div className={`${themeClass} max-w-7xl mx-auto px-6`}>
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* EXPLICACIÓN DEL CAMBIO:
+               Usamos 'flex-col-reverse' para que en móvil la IMAGEN (que está abajo en el HTML)
+               suba al principio y el TEXTO quede abajo.
+               Luego en desktop 'lg:flex-row' o 'lg:flex-row-reverse' maneja la alternancia.
+            */}
+            <div className={`flex flex-col-reverse ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}>
 
                 {/* Contenido de Texto */}
-                <div className={`flex-1 ${!isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                    {/* USANDO VARIABLES DINÁMICAS */}
+                <div className="flex-1 w-full">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6
                         bg-[var(--solution-accent)]/10 text-[var(--solution-accent)] border border-[var(--solution-accent)]/20">
                         {tag}
@@ -30,22 +32,20 @@ export default function SolutionRow({ solution, index }) {
                     <ul className="space-y-4 mb-10">
                         {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                                {/* ICONO DINÁMICO */}
                                 <CheckCircle2 className="text-[var(--solution-accent)] mt-1 flex-shrink-0" size={20} />
                                 <span className="text-slate-300">{feature}</span>
                             </li>
                         ))}
                     </ul>
 
-                    {/* BOTÓN DINÁMICO */}
                     <button className="border-2 border-[var(--solution-accent)] text-[var(--solution-accent)]
                         hover:bg-[var(--solution-accent)]/10 font-bold px-8 py-3 rounded-xl transition-all hover:scale-105">
                         {buttonText}
                     </button>
                 </div>
 
-                {/* Contenedor de Imagen con Efecto Mac Window y Glow Dinámico */}
-                <div className={`flex-1 w-full ${!isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                {/* Contenedor de Imagen */}
+                <div className="flex-1 w-full">
                     <div className="relative rounded-xl overflow-hidden shadow-2xl bg-navy-light border border-white/5
                         transition-transform hover:-translate-y-2 solution-card-glow">
 

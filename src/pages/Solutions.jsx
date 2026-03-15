@@ -1,5 +1,6 @@
 import { SOLUTIONS_DATA } from '../constants/solutions';
 import SolutionRow from '../sections/solutions/SolutionRow';
+import { Link } from 'react-router-dom';
 
 export default function Solutions() {
     return (
@@ -30,7 +31,7 @@ export default function Solutions() {
             </section>
 
             {/* SOLUTIONS LIST */}
-            <section className="py-32 space-y-40">
+            <section id="solutions" className="py-32 space-y-40">
                 {SOLUTIONS_DATA.map((solution, index) => (
                     <SolutionRow key={index} solution={solution} index={index} />
                 ))}

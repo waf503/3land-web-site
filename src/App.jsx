@@ -5,10 +5,12 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import Pricing from './pages/Pricing'
 import Solutions from "./pages/Solutions";
+import ScrollToHash from './components/utils/ScrollToHash'; // Importa el componente
 
 export default function App() {
     return (
         <BrowserRouter>
+            <ScrollToHash />
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Home/>}/>

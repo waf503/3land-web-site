@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 export default function Hero() {
     return (
         <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -33,20 +33,12 @@ export default function Hero() {
                             transition-all">
                             Agendar Demo
                         </button>
-                        <button
-                            className="
-                            border
-                            border-slate-300
-                            border-navy-lighter
-                            hover:bg-navy-lighter
-                            px-8 py-4 rounded-xl
-                            text-base
-                            text-white
-                            font-bold
-                            transition-all
-                            ">
+                        <Link
+                            to="/solutions#solutions"
+                            className="border border-slate-300 border-navy-lighter hover:bg-navy-lighter px-8 py-4 rounded-xl text-base text-white font-bold transition-all inline-block text-center"
+                        >
                             Ver Planes
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="relative lg:ml-10">
