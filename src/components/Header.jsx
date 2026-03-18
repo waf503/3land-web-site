@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants/navigation';
 import Logo from './common/Logo';
-
+import WhatsAppButton from "./common/WhatsAppButton";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -39,9 +39,9 @@ export default function Header() {
 
                 {/* Actions Buttons */}
                 <div className="flex items-center gap-4">
-                    <button className="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer active:scale-95">
-                        Demo gratuita
-                    </button>
+                    <WhatsAppButton theme="secondary">
+                        Obtener BILANS ERP
+                    </WhatsAppButton>
 
                     <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <X /> : <Menu />}
