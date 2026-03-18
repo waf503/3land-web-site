@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import ScrollToTop from "./common/ScrollToTop.jsx";
 import Header from './Header'
 import Footer from './Footer'
 
@@ -19,6 +20,7 @@ export default function Layout() {
             </main>
             {/*<Footer />*/}
             <Footer/>
+            <ScrollToTop />
         </div>
     )
 }
