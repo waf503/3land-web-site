@@ -39,9 +39,12 @@ export default function Header() {
 
                 {/* Actions Buttons */}
                 <div className="flex items-center gap-4">
-                    <WhatsAppButton theme="secondary">
-                        Obtener BILANS ERP
-                    </WhatsAppButton>
+                    {/* 1. ESTE BOTÓN SOLO SE VE EN ESCRITORIO (md:flex) */}
+                    <div className="hidden md:flex">
+                        <WhatsAppButton theme="secondary">
+                            Obtener BILANS ERP
+                        </WhatsAppButton>
+                    </div>
 
                     <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <X /> : <Menu />}
@@ -49,19 +52,26 @@ export default function Header() {
                 </div>
             </nav>
 
-            {/* Mobil glass menu */}
+            {/* Mobil Menu - Fondo Sólido para mejor legibilidad */}
             {isOpen && (
-                <nav className="absolute top-full left-0 w-full glass p-6 md:hidden flex flex-col gap-4">
+                <nav className="absolute top-full left-0 w-full bg-slate-900 border-b border-primary/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl animate-in fade-in slide-in-from-top-2">
                     {NAV_LINKS.map((link) => (
                         <Link
                             key={link.name}
                             to={link.href}
-                            onClick={(e) => handleLinkClick(e, link.href)}
-                            className="text-lg font-medium text-slate-100 py-3 border-b border-primary/10 last:border-0"
+                            onClick={() => setIsOpen(false)}
+                            className="text-lg font-medium text-slate-100 py-4 border-b border-white/5 last:border-0 active:text-primary transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
+
+                    {/* Botón de WhatsApp integrado en el menú móvil */}
+                    <div className="pt-2">
+                        <WhatsAppButton theme="success" className="w-full py-4 text-base">
+                            Demo gratuita
+                        </WhatsAppButton>
+                    </div>
                 </nav>
             )}
         </header>
