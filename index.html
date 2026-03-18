@@ -11,3 +11,14 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<script>
+  (function() {
+    const theme = localStorage.getItem('theme');
+    // Si el tema es dark o no hay tema definido (asumimos dark para Bilans)
+    if (theme === 'dark' || !theme) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>

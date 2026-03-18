@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants/navigation';
 import Logo from './common/Logo';
 import WhatsAppButton from "./common/WhatsAppButton";
+import ThemeToggle from "./common/ThemeToggle";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

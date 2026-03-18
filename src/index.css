@@ -35,6 +35,33 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
 
+    /* Textos Adaptativos */
+    --color-text-main: #1e293b; /* Slate 800 para modo light */
+    --color-text-muted: #64748b; /* Slate 500 para descripciones light */
+
+    /* Gradients dinámicos */
+    --background-image-hero-light: radial-gradient(circle at 50% 50%, rgba(0, 194, 224, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
+
+    /* Animación de Carrusel Infinito (Slider) */
+    @keyframes infinite-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+    /* Definimos la utilidad de animación */
+    /* 40s es una velocidad media-lenta para que sea minimalista */
+    --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+
+    /* Paleta Light Profesional */
+    --color-light-bg: #F8FAFC;         /* Fondo principal nítido */
+    --color-light-card: #FFFFFF;       /* Fondo de tarjetas */
+    --color-light-border: #E2E8F0;     /* Bordes definidos */
+    --color-light-text-main: #0F172A;  /* Texto casi negro para legibilidad */
+    --color-light-text-muted: #475569; /* Texto secundario */
+
+    /* Hover Dinámico Light */
+    --color-light-hover: #F1F5F9;      /* Gris azulado muy suave */
+
     /* Animación Float */
     /* KEYFRAMES: Nota que no llevan los dos puntos y llaves directamente */
     @keyframes float {
@@ -63,6 +90,16 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 194, 224, 0.1);
 }
+@utility cta-mesh {
+    /* En modo claro usamos un azul navy profundo para que el CTA destaque */
+    background-color: #0F172A;
+    background-image: var(--background-image-cta-mesh);
+
+    /* En modo oscuro usamos tu color de fondo original */
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-background-dark);
+    }
+}
 
 @utility pattern-dots {
     background-image: radial-gradient(rgba(0, 194, 224, 0.1) 1px, transparent 1px);
@@ -71,7 +108,17 @@
 
 @layer base {
     body {
-        @apply font-display bg-background-dark text-navy-light antialiased;
+        @apply font-display bg-light-bg text-light-text-main antialiased
+        dark:bg-background-dark dark:text-slate-200
+        transition-colors duration-500 ease-in-out;
+    }
+}
+@layer components {
+    .container-bilans {
+        /* mx-auto centra el bloque */
+        /* max-w-[1600px] expande el contenido para reducir márgenes laterales */
+        /* px-6 es el margen en móvil, lg:px-12 en escritorio */
+        @apply max-w-[1600px] mx-auto px-6 lg:px-12 w-full;
     }
 }
 

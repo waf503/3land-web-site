@@ -14,7 +14,7 @@ export default function Layout() {
     return (
         <div className="app">
             <Header />
-            <main>
+            <main >
                 <Outlet />
             </main>
             {/*<Footer />*/}

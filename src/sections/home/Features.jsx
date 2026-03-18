@@ -3,17 +3,23 @@ import FeatureCard from "../../components/common/FeatureCard";
 
 export default function Features() {
     return (
-        <section id="features" className="py-24 bg-[#081221]">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16 space-y-4">
-                    <h1 className="text-3xl lg:text-4xl font-bold text-white">
+        <section
+            id="features"
+            className="py-32 bg-slate-50 dark:bg-[#081221] border-y border-slate-200 dark:border-white/5 transition-colors duration-500"
+        >
+            <div className="container-bilans">
+                {/* Header de Sección: Jerarquía Clara */}
+                <div className="max-w-3xl mx-auto text-center mb-20 space-y-5">
+                    <h2 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
                         Potencia cada área de tu negocio
-                    </h1>
-                    <p className="text-slate-custom">
-                        Módulos especializados e integrados para un control total.
+                    </h2>
+                    <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 font-medium">
+                        Módulos especializados e integrados para un control total y una gestión eficiente.
                     </p>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+
+                {/* Grid con espaciado amplio (gap-8) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     {FEATURES_ITEMS.map((feat)=> (
                         <FeatureCard
                             key={feat.title}
