@@ -25,9 +25,11 @@ export default function Solutions() {
                         <WhatsAppButton theme="primary">
                             Agendar Consultoría
                         </WhatsAppButton>
-                        <button className="bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 text-slate-900 dark:text-white font-bold px-8 py-4 rounded-xl transition-all border border-slate-200 dark:border-white/10">
-                            Ver Planes y Precios
-                        </button>
+                        <Link to="/pricing">
+                            <button className="w-full md:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 text-slate-900 dark:text-white font-bold px-8 py-4 rounded-xl transition-all border border-slate-200 dark:border-white/10 cursor-pointer hover:scale-105 active:scale-95">
+                                Ver Planes y Precios
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>

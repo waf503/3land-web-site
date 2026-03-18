@@ -1,39 +1,31 @@
-// src/components/common/WhatsAppButton.jsx
 import PropTypes from 'prop-types';
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton({
                                            children = "Solicitar Demo",
-                                           className = "", // Clases extra para posicionamiento (ej: mt-4, mx-auto)
+                                           className = "",
                                            icon = true,
-                                           // 1. Nueva Prop para el tema, con un valor por defecto
-                                           theme = "primary"
+                                           theme = "primary",
+                                           // 1. Nueva Prop para el mensaje personalizado
+                                           message = ""
                                        }) {
-    // CENTRALIZA AQUÍ TU CONFIGURACIÓN DE WHATSAPP
     const whatsappNumber = "50377445560";
-    const whatsappMessage = "Hola, me gustaría obtener más información sobre sus servicios del ERP BILANS.";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-    // 2. MAPA DE ESTILOS (Themes)
-    // Definimos las combinaciones de clases de Tailwind para cada variante.
+    // 2. Lógica de Mensaje: Si hay un mensaje por prop, úsalo. Si no, usa el genérico.
+    const defaultMessage = "Hola, me gustaría obtener más información sobre sus servicios del ERP BILANS.";
+    const finalMessage = message || defaultMessage;
+
+    // 3. Generación de URL dinámica con encodeURIComponent para evitar errores con espacios o símbolos
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(finalMessage)}`;
+
     const themeStyles = {
-        // Tema principal (el que ya tenías)
         primary: "bg-primary hover:bg-primary/90 text-background-dark shadow-lg shadow-primary/20 border border-transparent",
-
-        // Tema secundario (ej: slate oscuro)
         secondary: "bg-slate-700 hover:bg-slate-600 text-white shadow-lg shadow-slate-900/20 border border-transparent",
-
-        // Tema de éxito/WhatsApp (Verde)
         success: "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-900/20 border border-transparent",
-
-        // Tema Outline (solo borde, fondo transparente)
         outline: "bg-transparent hover:bg-primary/10 text-primary border border-primary/50 shadow-none",
-
-        // Tema Minimalista (sin fondo, solo texto)
         ghost: "bg-transparent hover:bg-white/5 text-slate-300 hover:text-white shadow-none border border-transparent"
     };
 
-    // 3. Selección del estilo actual (con respaldo al primario si el tema no existe)
     const currentThemeClasses = themeStyles[theme] || themeStyles.primary;
 
     return (
@@ -41,16 +33,15 @@ export default function WhatsAppButton({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            // 4. Combinación de clases: Base + Tema + Clases Extra
             className={`
-                px-6 py-2.5 rounded-lg text-sm font-bold 
+                px-6 py-3 rounded-xl text-sm font-bold 
                 transition-all cursor-pointer active:scale-95 no-underline 
                 flex items-center justify-center gap-2
                 ${currentThemeClasses}
                 ${className}
             `}
         >
-            {icon && <MessageCircle className="w-4 h-4" />}
+            {icon && <MessageCircle className="w-5 h-5" />}
             {children}
         </a>
     );
@@ -60,6 +51,6 @@ WhatsAppButton.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
     icon: PropTypes.bool,
-    // 5. Validación estricta del tema usando 'oneOf'
+    message: PropTypes.string, // Validación para el mensaje
     theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'outline', 'ghost']),
 };

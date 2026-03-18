@@ -37,7 +37,11 @@ export default function SolutionRow({ solution, index }) {
                     </ul>
 
                     {/* Integración de WhatsAppButton */}
-                    <WhatsAppButton theme="primary" icon={true}>
+                    <WhatsAppButton
+                        theme="primary"
+                        icon={true}
+                        message={solution.whatsappMessage} // Pasamos el mensaje dinámico aquí
+                    >
                         {buttonText || "Consultar Solución"}
                     </WhatsAppButton>
                 </div>
