@@ -13,7 +13,7 @@ export default function Features() {
                     <h2 className="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
                         Potencia cada área de tu negocio
                     </h2>
-                    <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 font-medium">
+                    <p className="text-bilans-body max-w-2xl mx-auto">
                         Módulos especializados e integrados para un control total y una gestión eficiente.
                     </p>
                 </div>

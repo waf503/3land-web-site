@@ -48,7 +48,7 @@ export default function FeatureCard({ icon: Icon, title, desc, color }) {
                 </h3>
 
                 {/* Descripción: Slate-600 para armonía visual */}
-                <p className="text-sm text-slate-600 dark:text-slate-custom leading-relaxed line-clamp-2 mb-4">
+                <p className="text-bilans-muted line-clamp-2 mb-4">
                     {desc}
                 </p>
 

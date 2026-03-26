@@ -23,7 +23,7 @@ export default function Hero() {
                     </h1>
 
                     {/* Párrafo: Cambia de Slate muted a Slate Custom (gris azulado) */}
-                    <p className="text-lg text-slate-600 dark:text-slate-custom max-w-xl leading-relaxed">
+                    <p className="text-bilans-body max-w-xl">
                         Automatiza procesos, escala tu negocio y toma decisiones basadas en datos con nuestra plataforma
                         integral diseñada para el crecimiento sostenible.
                     </p>
@@ -31,7 +31,20 @@ export default function Hero() {
                     <div className="flex flex-wrap gap-4 pt-4">
                         <Link
                             to="/solutions#solutions"
-                            className="bg-slate-900 dark:bg-primary text-white dark:text-background-dark px-8 py-4 rounded-xl text-base font-bold transition-all hover:scale-105 inline-block text-center shadow-xl shadow-slate-200 dark:shadow-primary/20"
+                            className={`
+                            /* ESTRUCTURA Y TEXTO */
+                            px-8 py-4 rounded-xl text-base font-bold text-center inline-block
+                            transition-all hover:scale-105 active:scale-95
+                            
+                            /* MODO LIGHT: Estilo Secondary (Slate-700) */
+                            bg-slate-700 text-white 
+                            shadow-lg shadow-slate-900/10 
+                            border border-transparent
+                            
+                            /* MODO DARK: Estilo Primary (Cian) */
+                            dark:bg-primary dark:text-background-dark 
+                            dark:shadow-lg dark:shadow-primary/20
+                        `}
                         >
                             Ver Planes
                         </Link>

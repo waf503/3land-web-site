@@ -83,6 +83,20 @@
     .solution-card-glow {
         box-shadow: 0 20px 50px -12px var(--solution-glow);
     }
+    /* Clase para párrafos estándar de cuerpo de texto */
+    .text-bilans-body {
+        @apply text-base lg:text-lg font-normal leading-relaxed;
+        @apply text-slate-600 dark:text-slate-custom;
+        /* Usamos la fuente de tu variable --font-display */
+        font-family: var(--font-display);
+    }
+
+    /* Clase para textos más pequeños o secundarios (como los de las cards) */
+    .text-bilans-muted {
+        @apply text-sm leading-snug;
+        @apply text-slate-500 dark:text-slate-400;
+        font-family: var(--font-display);
+    }
 }
 @utility glass {
     background: rgba(17, 34, 64, 0.7);

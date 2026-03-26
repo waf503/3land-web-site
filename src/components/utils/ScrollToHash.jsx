@@ -1,33 +1,34 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigationType } from 'react-router-dom';
 
 export default function ScrollToHash() {
-    const { hash, pathname } = useLocation();
+    const { hash, pathname, key } = useLocation();
+    const navType = useNavigationType(); // Detecta si es PUSH, POP o REPLACE
 
     useEffect(() => {
-        if (hash) {
-            // Quitamos el '#' para obtener el ID
-            const id = hash.replace('#', '');
-            const element = document.getElementById(id);
+        const scrollToElement = () => {
+            if (hash) {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
 
-            if (element) {
-                // El timeout es CRÍTICO: Da tiempo a React a montar el
-                // componente Home antes de intentar buscar el ID.
-                const timer = setTimeout(() => {
-                    element.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }, 150);
-
-                return () => clearTimeout(timer);
+                if (element) {
+                    // Mantenemos tu timer crítico
+                    setTimeout(() => {
+                        element.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            } else if (navType === 'PUSH' || navType === 'REPLACE') {
+                // Solo hacemos scroll arriba si es una navegación nueva y no hay hash
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-        } else {
-            // Si navegamos a una página sin hash (ej: de Home a Solutions),
-            // siempre volvemos arriba de todo.
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    }, [hash, pathname]); // Se ejecuta cada vez que cambias de ruta o de ancla
+        };
+
+        scrollToElement();
+
+    }, [hash, pathname, key]); // <--- La clave es agregar 'key'
 
     return null;
 }
