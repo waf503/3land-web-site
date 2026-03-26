@@ -3,7 +3,7 @@ import {ArrowDown} from 'lucide-react';
 import ProblemCard from "../../components/common/ProblemCard.jsx";
 export default function PainPoints() {
     return (
-        <section className="py-24 bg-white dark:bg-background-dark transition-colors duration-500 overflow-hidden">
+        <section className="py-24 bg-slate-50 dark:bg-[#081221] border-y border-slate-200 dark:border-white/5 transition-colors duration-500 overflow-hidden">
             <div className="container-bilans">
                 {/* Header: El "Dolor" */}
                 <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">

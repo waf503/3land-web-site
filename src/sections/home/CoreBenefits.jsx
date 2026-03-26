@@ -4,7 +4,7 @@ import { CORE_BENEFITS_DATA } from "../../constants/benefitsItems.jsx";
 export default function CoreBenefits() {
     return (
         /* Fondo adaptativo con transición suave */
-        <section className="py-32 relative overflow-hidden bg-white dark:bg-background-dark transition-colors duration-500">
+        <section className="py-24 bg-slate-50 dark:bg-[#081221] border-y border-slate-200 dark:border-white/5 transition-colors duration-500 overflow-hidden">
             {/* Decoración de fondo sutil (opcional para dar textura) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none
                             bg-[radial-gradient(circle_at_center,rgba(0,194,224,0.03)_0%,transparent_70%)]

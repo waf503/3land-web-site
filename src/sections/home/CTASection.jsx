@@ -2,7 +2,10 @@ import WhatsAppButton from "../../components/common/WhatsAppButton.jsx";
 
 export default function CTASection() {
     return (
-        <section className="py-24 relative bg-slate-50 dark:bg-background-dark transition-colors duration-500">
+        <section
+            id="features"
+            className="py-32 bg-white dark:bg-background-dark transition-colors duration-500"
+        >
             <div className="container-bilans">
                 {/* Contenedor Principal:
                     - Light: Azul Navy Profundo (Slate-900) con sombra azulada.

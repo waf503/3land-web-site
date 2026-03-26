@@ -5,7 +5,7 @@ export default function Features() {
     return (
         <section
             id="features"
-            className="py-32 bg-slate-50 dark:bg-[#081221] border-y border-slate-200 dark:border-white/5 transition-colors duration-500"
+            className="py-32 bg-white dark:bg-background-dark transition-colors duration-500"
         >
             <div className="container-bilans">
                 {/* Header de Sección: Jerarquía Clara */}

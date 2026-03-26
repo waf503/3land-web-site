@@ -5,7 +5,7 @@ export default function TrustedBy() {
     const carrouselLogos = [...PARTNERS, ...PARTNERS, ...PARTNERS];
 
     return (
-        <section className="py-24 bg-slate-50 dark:bg-[#060d19] border-y border-slate-200 dark:border-white/5 overflow-hidden transition-colors duration-500">
+        <section className="py-24 bg-slate-50 dark:bg-[#081221] border-y border-slate-200 dark:border-white/5 transition-colors duration-500 overflow-hidden">
             <div className="container-bilans" id="clients">
                 <p className="text-center text-xs lg:text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em] mb-16 opacity-80">
                     Empresas que confían en Bilans ERP
